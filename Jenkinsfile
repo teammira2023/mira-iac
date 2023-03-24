@@ -26,7 +26,6 @@ pipeline {
       steps {
         sh 'chmod +x mya.sh'
         sh 'chmod +x mytina.sh'
-        sh 'cat mya.sh'
         sh 'cat mytina.sh'
       }
     }
