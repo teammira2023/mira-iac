@@ -36,7 +36,7 @@ pipeline {
         sh 'echo $AWS_ACCESS_KEY_ID'
         sh 'echo $AWS_SECRET_ACCESS_KEY'
         sh 'echo $AWS_SESSION_TOKEN'
-        sh './mya.sh'
+        sh 'terraform init -input=false'
       }
     }
 
@@ -45,7 +45,7 @@ pipeline {
         sh 'echo $AWS_ACCESS_KEY_ID'
         sh 'echo $AWS_SECRET_ACCESS_KEY'
         sh 'echo $AWS_SESSION_TOKEN'
-        sh './mya.sh'
+        sh 'terraform apply -input=false -compact-warnings -auto-approve'
       }
     }
 
